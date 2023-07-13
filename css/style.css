@@ -261,13 +261,13 @@ section#services {
 
 .service-label h2 {
   font-size: 3rem;
-  color: #333;
+  color: white;
   margin: 10px;
 }
 
 .service-label p {
   font-size: 18px;
-  color: #333;
+  color: white;
   margin: 10px 20px;
   text-align: justify;
   text-transform: capitalize;
