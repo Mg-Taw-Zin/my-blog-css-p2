@@ -1,5 +1,5 @@
 :root {
-  --green: green;
+  --yellow: yellow;
   --white: white;
   --black: black;
   --purple: purple;
@@ -11,7 +11,7 @@
   --2rem: 2rem;
   --3rem: 3rem;
   --5rem: 5rem;
-  --trasition: all ease-in-out 0.3s;
+  --trasition: all 0.2s ease-in-out;
   --width-full: 100%;
 }
 
@@ -21,14 +21,14 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   font-family: Arial, Helvetica, sans-serif, "Franklin Gothic Medium",
     "Arial Narrow";
   scroll-behavior: smooth;
 }
 
 header {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
     url("../image/bg.jpg");
   background-size: cover;
   background-position: center;
@@ -36,13 +36,13 @@ header {
 
 nav {
   width: var(--width-full);
-  background: #00000030;
+  background: #00000050;
   backdrop-filter: blur(1rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--1rem) var(--3rem);
-  box-shadow: 2px 2px 5px var(--green);
+  box-shadow: 2px 2px 3px var(--yellow);
   position: fixed;
   z-index: 5;
 }
@@ -62,14 +62,15 @@ nav {
 .nav-links a {
   background: var(--purple);
   padding: var(--button-lg);
-  border-radius: var(--1-5rem);
+  border-radius: 10px;
   margin: 0 5px;
   font-size: var(--1rem);
   transition: var(--trasition);
+  border: 1px solid var(--white);
 }
 
 .nav-links a:hover {
-  background: var(--green);
+  background: var(--yellow);
 }
 
 #bars {
@@ -84,39 +85,42 @@ nav {
 
 .social-links {
   display: flex;
-  font-size: var(--1-2rem);
   justify-content: center;
   align-items: center;
-  gap: var(--1rem);
+  font-size: var(--1-5rem);
+  gap: 10px;
 }
 
 .banner {
-  background: rgba(0, 0, 0, 0.7);
-  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .banner-group {
-  background: rgb(0, 0, 0, 0.5);
-  border-radius: var(--1-2rem);
+  background: rgb(0, 0, 0, 0.6);
+  border-radius: var(--1rem);
   text-align: center;
-  padding: var(--3rem);
+  padding: var(--5rem);
+  max-width: 800px;
+  width: 100%;
 }
 
 .banner-group h1,
 .banner-group h3 {
-  color: var(--green);
+  color: var(--yellow);
   font-size: var(--3rem);
 }
 
-.banner-group h1 {
-  margin-bottom: var(--1-2rem);
+.banner-group h2 {
+  margin: var(--1-2rem) 0;
 }
 
 .banner-group h3 {
-  margin-top: var(--1-2rem);
+  margin: var(--1-2rem) 0;
   margin-bottom: var(--2rem);
 }
 
@@ -128,21 +132,21 @@ nav {
 .btn {
   font-size: var(--1-2rem);
   font-weight: bold;
-  background: var(--green);
-  border-radius: var(--1-2rem);
+  border-radius: 10px;
   border: none;
   transition: var(--trasition);
   padding: var(--button-lg);
+  background: var(--purple);
+  border: 1px solid var(--white);
 }
 
 .btn:hover {
-  background: var(--purple);
-  color: var(--white);
+  background: var(--yellow);
 }
 
 #about {
   background: var(--black);
-  padding: var(--5rem) var(--1-2rem);
+  padding: var(--5rem) 0;
 }
 
 .about-div {
@@ -151,7 +155,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--1-5rem);
+  gap: var(--2rem);
 }
 
 .about-img img {
@@ -159,50 +163,51 @@ nav {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 10px 5px var(--green);
+  box-shadow: 0 0 5px 5px var(--yellow);
 }
 
 .text-group h2 {
-  font-size: var(--1-2rem);
+  font-size: var(--2rem);
   text-decoration: underline;
 }
 
 .text-group p {
-  font-size: var(--1rem);
+  font-size: var(--1-2rem);
   text-align: start;
   margin: var(--1rem) 0;
   line-height: var(--1-5rem);
+  color: #bdbdbd;
 }
 
 #projects {
   background: #333;
-  padding: var(--3rem) var(--1rem);
+  padding: var(--1rem);
   text-align: center;
 }
 
 .title {
   font-size: var(--3rem);
-  color: var(--green);
-  margin-bottom: var(--2rem);
+  color: var(--yellow);
+  margin: var(--2rem) 0;
 }
 
 .projects {
-  margin: var(--3rem) 0;
+  margin: var(--2rem) 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--1-5rem);
+  gap: var(--2rem);
 }
 
 .project {
   flex: 1 1 25rem;
-  box-shadow: 0 0 var(--1-2rem) 5px var(--green);
+  box-shadow: 0 0 10px 5px var(--yellow);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--2rem) 10px;
-  border-radius: var(--1-5rem);
+  padding: var(--3rem) var(--1-5rem);
+  border-radius: var(--1rem);
   background: var(--black);
 }
 
@@ -218,14 +223,13 @@ nav {
 .project h3 {
   font-size: var(--2rem);
   font-weight: bold;
-  color: var(--green);
-  margin: var(--1rem) 0;
+  color: var(--yellow);
+  margin: var(--1-2rem) 0;
 }
 
 .project p {
   font-size: var(--1-2rem);
-  color: var(--green);
-  margin: 0 var(--1-2rem);
+  color: var(--yellow);
   font-weight: bold;
   line-height: var(--2rem);
 }
@@ -236,21 +240,25 @@ nav {
 
 #services {
   background-color: var(--black);
-  padding: var(--2rem);
+  padding: var(--1rem);
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   gap: var(--2rem);
+  justify-content: center;
+  align-items: center;
 }
 
 .service-box {
   flex: 1 1 25rem;
-  height: 350px;
-  box-shadow: 0 0 10px var(--green);
+  height: 370px;
+  box-shadow: 0 0 10px 5px var(--yellow);
   position: relative;
   overflow: hidden;
+  border-radius: var(--1rem);
 }
 
 .service-img,
@@ -264,26 +272,28 @@ nav {
   width: var(--width-full);
   height: var(--width-full);
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
 }
 
 .service-label {
-  background: var(--green);
-  display: block;
+  background: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   transform: translate(-100%);
   transition: var(--trasition);
+  gap: 10px;
 }
 
 .service-label h2 {
   font-size: var(--3rem);
-  margin: var(--1rem) 0;
 }
 
 .service-label p {
   font-size: var(--1-2rem);
-  margin: var(--button-lg);
-  text-align: start;
+  line-height: var(--2rem);
 }
 
 .service-box:hover .service-label {
@@ -293,38 +303,71 @@ nav {
 .contact {
   background-color: black;
   text-align: center;
-  padding: var(--1-2rem) 0;
+  padding: var(--2rem) var(--1rem);
 }
 
-.contact h1 {
-  color: var(--green);
-  display: inline-block;
-  font-size: var(--1-5rem);
-  font-weight: bold;
+.contact-section {
+  display: flex;
+  gap: var(--2rem);
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-type {
+.contact-text {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--yellow);
+}
+
+.contact-section div {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-type,
+.contact-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--1rem) 0;
-  gap: var(--1rem);
-  width: 90%;
-  margin: 0 auto;
-  flex-wrap: nowrap;
+  gap: 10px;
+  flex-direction: column;
 }
 
-.contact-type h2 {
-  color: var(--green);
-  border: 1px solid var(--green);
-  padding: var(--button-lg);
-  cursor: pointer;
-  border-radius: var(--1-5rem);
+.contact-type div {
+  padding: 10px 5px;
+  border-radius: 5px;
 }
 
-.contact-type h2:hover {
-  color: var(--white);
+.contact-type div span {
+  font-size: var(--1-5rem);
+  color: var(--yellow);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--black);
+  font-size: var(--1rem);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  color: var(--black);
+  padding: 5px;
   border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: var(--1-2rem);
+  resize: none;
+}
+
+.contact-form input[type="submit"] {
+  background: var(--purple);
+  transition: var(--trasition);
+}
+
+.contact-form input[type="submit"]:hover {
+  background: var(--yellow);
 }
 
 /* media Query start */
@@ -333,6 +376,7 @@ nav {
   .about-div {
     flex-direction: column;
   }
+
   .contact-type {
     flex-wrap: wrap;
   }
@@ -341,6 +385,10 @@ nav {
 @media (max-width: 870px) {
   #bars {
     display: block;
+  }
+
+  .banner-group {
+    border-radius: 0;
   }
 
   .social-links {
@@ -394,9 +442,17 @@ nav {
   .contact-type h2 {
     width: var(--width-full);
   }
+
+  .contact-section {
+    flex-direction: column;
+  }
 }
 
-@media (max-width: 362px) {
+@media (max-width: 420px) {
+  html {
+    font-size: 90%;
+  }
+
   .about-img img {
     width: 220px;
     height: 220px;
@@ -409,5 +465,19 @@ nav {
 
   .banner h2 {
     font-size: var(--2rem);
+  }
+
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  #bars {
+    padding: var(--button-sm);
+    font-size: var(--1rem);
   }
 }
